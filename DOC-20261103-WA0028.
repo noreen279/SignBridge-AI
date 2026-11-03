@@ -1,0 +1,28 @@
+# SignBridge — Hand Sign Recognition
+
+SignBridge recognizes a small set of hand signs from a camera feed or a photo
+and turns them into letters and words, with pages for live recognition,
+learning the signs, a practice quiz, and progress tracking.
+
+## How it works
+
+- Hand landmarks are detected in the browser with MediaPipe Hand Landmarker.
+- A rule-based classifier (`src/lib/signs.ts`) maps finger states to signs.
+- Progress is stored locally in the browser (`src/lib/progress.ts`).
+
+## Development
+
+You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+
+```sh
+npm i
+npm run dev
+```
+
+## Built with
+
+- TanStack Start
+- TypeScript
+- React
+- Tailwind CSS
+- MediaPipe Tasks Vision
